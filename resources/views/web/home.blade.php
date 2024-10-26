@@ -57,36 +57,14 @@
             <div class="brands p-40">
                 <div class="container">
                     <div class="brands-logo">
-                        <div class="logo">
-                            <img src="assets/media/brands/knights_Cricket_logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/southafrica_cricket_logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/action_cricket_logo.png" alt>
-                        </div>
+
+                        @foreach ($teams as $team)
                         <div class="logo ">
-                            <img src="assets/media/brands/cricketScotlandLogo.png" alt>
+                            <img src="{{ asset('storage/' . $team->logo) }}" alt="{{$team->short_name}}" style="height:80px;">
                         </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/knights_Cricket_logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/southafrica_cricket_logo.png" alt>
-                        </div>
-                        <div class="logo">
-                            <img src="assets/media/brands/action_cricket_logo.png" alt>
-                        </div>
-                        <div class="logo ">
-                            <img src="assets/media/brands/cricketScotlandLogo.png" alt>
-                        </div>
+                        @endforeach
+
+
                     </div>
                 </div>
             </div>
@@ -230,8 +208,8 @@
                                 <div class="p-40">
                                     <h3 class="light-black mb-24">The Cricket Pulse
                                         Story, Beyond the Boundary</h3>
-                                    <p class="dark-gray mb-16">{{ $info->about_main }}</p>
-                                    
+                                    <span class="dark-gray mb-16">{!! $info->about_main !!}</span>
+
                                     <a href="player-detail.html" class="cus-btn primary">Read More
                                         <i class="fal fa-chevron-right"></i>
                                     </a>
@@ -437,7 +415,7 @@
                                 <span>Bold Eagles</span>
                                 <span>Lone Wolfs</span>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <div class="container">
                         <div class="match-detail">
@@ -585,7 +563,7 @@
                                             <i class="fas fa-star"></i>
                                         </div>
                                     </div>
-                                   
+
                                     <img
                                         src="assets/media/cricketer/img-1.png"
                                         alt>
@@ -605,7 +583,7 @@
                                             <i class="fas fa-star"></i>
                                         </div>
                                     </div>
-                                    
+
                                     <img
                                         src="assets/media/cricketer/img-2.png"
                                         alt>
@@ -625,7 +603,7 @@
                                             <i class="fas fa-star"></i>
                                         </div>
                                     </div>
-                                    
+
                                     <img
                                         src="assets/media/cricketer/img-3.png"
                                         alt>
@@ -745,7 +723,7 @@
                                     <div class="info">
                                         <div class="date-author mb-12">
                                             <div class="date">
-                                                <h4 class="light-black">12</h4> 
+                                                <h4 class="light-black">12</h4>
                                                 <h6 class="light-black">October, 2023</h6>
                                             </div>
                                             <div class="author">
@@ -790,7 +768,7 @@
                                     <div class="info">
                                         <div class="date-author mb-12">
                                             <div class="date">
-                                                <h4 class="light-black">12</h4> 
+                                                <h4 class="light-black">12</h4>
                                                 <h6 class="light-black">October, 2023</h6>
                                             </div>
                                             <div class="author">
@@ -833,7 +811,7 @@
                                     <div class="info">
                                         <div class="date-author mb-12">
                                             <div class="date">
-                                                <h4 class="light-black">12</h4> 
+                                                <h4 class="light-black">12</h4>
                                                 <h6 class="light-black">October, 2023</h6>
                                             </div>
                                             <div class="author">
@@ -876,7 +854,7 @@
                                     <div class="info">
                                         <div class="date-author mb-12">
                                             <div class="date">
-                                                <h4 class="light-black">12</h4> 
+                                                <h4 class="light-black">12</h4>
                                                 <h6 class="light-black">October, 2023</h6>
                                             </div>
                                             <div class="author">

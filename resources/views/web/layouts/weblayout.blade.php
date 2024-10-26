@@ -164,7 +164,7 @@
                                 <div class="footer-about">
                                     <div class="logo">
                                         <a href="index.html">
-                                            <img src="assets/media/logo.png" alt="">
+                                            <img src="assets/media/logo.png" alt="" style="height: 100px">
                                         </a>
                                     </div>
                                     <p class="dark-gray">Thank you for visiting the Amateur Corporate Cricket League!<br>Stay connected with us for updates, match schedules, and more.<br>Together, let's celebrate the spirit of corporate cricket! </p>

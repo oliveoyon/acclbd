@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id(); // Auto-incrementing ID
             $table->string('full_name'); // Full name of the team
+            $table->string('team_slug'); // Full name of the team
             $table->string('short_name'); // Short name of the team
+            $table->string('group_name'); // Short name of the team
             $table->string('logo')->nullable(); // Logo URL or path
             $table->string('team_image')->nullable(); // Team image URL or path
             $table->text('description')->nullable(); // Team description
