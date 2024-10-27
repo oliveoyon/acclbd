@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('homeindex');
 Route::get('/about-us', [WebsiteController::class, 'about'])->name('about');
+Route::get('/team-details/{team_slug}', [WebsiteController::class, 'teamDetail'])->name('teamDetail');
+Route::get('/player-details/{slug}', [WebsiteController::class, 'playerDetail'])->name('playerDetail');
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
