@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Games;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -112,5 +113,77 @@ class TeamController extends Controller
         $team->delete();
 
         return redirect()->route('admin.teams.index')->with('success', 'Team deleted successfully.');
+    }
+
+
+     // Function to display all games
+    public function gamesIndex()
+    {
+        $games = Games::with(['team1', 'team2'])->get(); // Eager load teams
+        return view('games.index', compact('games'));
+    }
+
+    // Function to show the create game form
+    public function gamesCreate()
+    {
+        $teams = Team::all(); // Get all teams for the dropdown
+        return view('games.create', compact('teams'));
+    }
+
+    // Function to store a new game
+    public function gamesStore(Request $request)
+    {
+        $request->validate([
+            'team_1_id' => 'required|exists:teams,id',
+            'team_2_id' => 'required|exists:teams,id',
+            'stadium' => 'nullable|string|max:255',
+            'match_type' => 'nullable|string|max:255',
+            'scheduled_datetime' => 'required|date',
+            'score_team_1' => 'nullable|integer',
+            'score_team_2' => 'nullable|integer',
+            'result' => 'nullable|string|max:255',
+            'match_details' => 'nullable|string',
+            'status' => 'nullable|integer|between:0,2',
+        ]);
+
+        Games::create($request->all());
+        return redirect()->route('admin.games.index')->with('success', 'Games created successfully.');
+    }
+
+    // Function to show the edit game form
+    public function gamesEdit($id)
+    {
+        $game = Games::findOrFail($id);
+        $teams = Team::all(); // Get all teams for the dropdown
+        return view('games.edit', compact('game', 'teams'));
+    }
+
+    // Function to update a specific game
+    public function gamesUpdate(Request $request, $id)
+    {
+        $request->validate([
+            'team_1_id' => 'required|exists:teams,id',
+            'team_2_id' => 'required|exists:teams,id',
+            'stadium' => 'nullable|string|max:255',
+            'match_type' => 'nullable|string|max:255',
+            'scheduled_datetime' => 'required|date',
+            'score_team_1' => 'nullable|integer',
+            'score_team_2' => 'nullable|integer',
+            'result' => 'nullable|string|max:255',
+            'match_details' => 'nullable|string',
+            'status' => 'nullable|integer|between:0,2',
+        ]);
+
+        $game = Games::findOrFail($id);
+        $game->update($request->all());
+        return redirect()->route('admin.games.index')->with('success', 'Games updated successfully.');
+    }
+
+    // Function to delete a specific game
+    public function gamesDestroy($id)
+    {
+        $game = Games::findOrFail($id);
+        $game->delete();
+        return redirect()->route('admin.games.index')->with('success', 'Games deleted successfully.');
     }
 }
