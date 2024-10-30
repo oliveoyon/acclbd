@@ -105,48 +105,7 @@
     </section>
     <!-- Achievements End -->
 
-    <!-- Testimonials Start -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="heading">
-                <div class="left">
-                    <h2 class="light-black">Player Testimonials</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10">
-                    <div class="testimonials-slider">
-                        <!-- Testimonial Item 1 -->
-                        <div class="testimonials-item">
-                            <img src="{{ asset('assets/media/testimonial/img-1.png') }}" alt="Ethan Williams">
-                            <div class="content">
-                                <h4 class="light-black">Ethan Williams</h4>
-                                <p class="dark-gray">Lorem ipsum dolor sit amet consectetur. Sed <br> nam nec luctus enim orci pellentesque sed <br> varius. Nulla nam amet dignissim.</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="33" viewBox="0 0 37 33" fill="none">
-                                    <path d="M36.9918 23.7826C36.9918 23.7866 36.9922 23.7906 36.9922 23.7945C36.9922 28.6026 33.0946 32.5002 28.2865 32.5002C23.4785 32.5002 19.5809 28.6027 19.5809 23.7945C19.5809 18.9864 23.4789 15.0888 28.2866 15.0888C29.2747 15.0888 30.2206 15.2611 31.1057 15.5646C29.147 4.32847 20.385 -2.91767 28.5073 3.04606C37.5138 9.65915 37.0019 23.5289 36.9918 23.7826Z" fill="#9EA2A8"/>
-                                    <path d="M9.13427 15.0889C10.1224 15.0889 11.0683 15.2611 11.9538 15.5646C9.99463 4.32854 1.23257 -2.9176 9.35497 3.04613C18.3615 9.65915 17.8496 23.5289 17.8395 23.7826C17.8395 23.7866 17.8399 23.7906 17.8399 23.7945C17.8399 28.6026 13.9423 32.5002 9.13426 32.5002C4.32611 32.5002 0.42857 28.6027 0.42857 23.7945C0.42857 18.9864 4.32655 15.0889 9.13427 15.0889Z" fill="#9EA2A8"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <!-- Testimonial Item 2 -->
-                        <div class="testimonials-item">
-                            <img src="{{ asset('assets/media/testimonial/img-2.png') }}" alt="Sophia Brown">
-                            <div class="content">
-                                <h4 class="light-black">Sophia Brown</h4>
-                                <p class="dark-gray">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="33" viewBox="0 0 37 33" fill="none">
-                                    <path d="M36.9918 23.7826C36.9918 23.7866 36.9922 23.7906 36.9922 23.7945C36.9922 28.6026 33.0946 32.5002 28.2865 32.5002C23.4785 32.5002 19.5809 28.6027 19.5809 23.7945C19.5809 18.9864 23.4789 15.0888 28.2866 15.0888C29.2747 15.0888 30.2206 15.2611 31.1057 15.5646C29.147 4.32847 20.385 -2.91767 28.5073 3.04606C37.5138 9.65915 37.0019 23.5289 36.9918 23.7826Z" fill="#9EA2A8"/>
-                                    <path d="M9.13427 15.0889C10.1224 15.0889 11.0683 15.2611 11.9538 15.5646C9.99463 4.32854 1.23257 -2.9176 9.35497 3.04613C18.3615 9.65915 17.8496 23.5289 17.8395 23.7826C17.8395 23.7866 17.8399 23.7906 17.8399 23.7945C17.8399 28.6026 13.9423 32.5002 9.13426 32.5002C4.32611 32.5002 0.42857 28.6027 0.42857 23.7945C0.42857 18.9864 4.32655 15.0889 9.13427 15.0889Z" fill="#9EA2A8"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <!-- Add more testimonials as needed -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials End -->
+
 
 </div>
 <!-- Main Content End -->

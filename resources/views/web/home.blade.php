@@ -10,7 +10,7 @@
                                 <h1 class="mb-12 light-black">{{ $info->home_title }}</h1>
                                 <p class="mb-32 light-black">{!! $info->home_title_short_description !!}</p>
                                 <div class="btn-block">
-                                    <a href="contact.html" class="cus-btn primary">Join Now
+                                    <a href="{{url('contact-us')}}" class="cus-btn primary">Join Now
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
                                             viewBox="0 0 24 25" fill="none">
                                             <g clip-path="url(#clip0_925_427)">
@@ -29,7 +29,7 @@
                                     <div class="overlay d-md-inline-block" data-bs-toggle="modal"
                                         data-bs-target="#videoModal">
                                         <a href="#" class="play-button fw-600 fs-25"
-                                            data-src="https://www.youtube.com/embed/EzDC8aAJln0">
+                                            data-src="https://www.youtube.com/embed/UN0rn93O1bo">
                                             <div class="icon"><i class="fas fa-play"></i></div>
                                             Watch Video
                                         </a>
@@ -73,7 +73,7 @@
                                 <h2 class="light-black">{{ $info->last_match_result }}</h2>
                                 <p class="light-black">{!! $info->last_match_result_short_desc !!}</p>
                             </div>
-                            <a href="match-result.html" class="cus-btn primary">See All
+                            <a href="{{url('match-result')}}" class="cus-btn primary">See All
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
                                     fill="none">
                                     <g clip-path="url(#clip0_925_428)">
@@ -143,7 +143,7 @@
                                 <div class="p-40">
                                     <h3 class="light-black mb-24">The Cricket Pulse Story, Beyond the Boundary</h3>
                                     <span class="dark-gray mb-16">{!! $info->about_main !!}</span>
-                                    <a href="player-detail.html" class="cus-btn primary">Read More <i
+                                    <a href="{{url('contact-us')}}" class="cus-btn primary">Know More <i
                                             class="fal fa-chevron-right"></i></a>
                                 </div>
                             </div>
@@ -181,7 +181,7 @@
                                 <h2 class="light-black">{{ $info->upcoming_match }}</h2>
                                 <p class="light-black">{!! $info->upcoming_match_short_desc !!}</p>
                             </div>
-                            <a href="match-schedule.html" class="cus-btn primary">See All
+                            <a href="{{route('fixture')}}" class="cus-btn primary">See All
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
                                     viewBox="0 0 24 25" fill="none">
                                     <g clip-path="url(#clip0_925_429)">
@@ -290,41 +290,18 @@
                                 <h2 class="light-black" id="gallery-heading">{{ $info->gallery }}</h2>
                                 <p class="light-black">{!! $info->gallery_short_desc !!}</p>
                             </div>
-                            <a href="gallery.html" class="cus-btn primary">See All
+                            <a href="{{url('gallery')}}" class="cus-btn primary">See All
                                 <!-- SVG icon -->
                             </a>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-12 mb-24">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-1.png" alt>
+                            @foreach($images as $image)
+                                <div class="col-md-4 mb-4">
+                                    <div class="img-block br-20 shadow">
+                                        <img src="{{ asset('storage/' . $image->image_path) }}" alt class="img-fluid">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 mb-24">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-2.png" alt>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 mb-24">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-3.png" alt>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 mb-24 mb-lg-0">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-4.png" alt>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 mb-24 mb-lg-0">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-5.png" alt>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-12 mb-0">
-                                <div class="img-block br-20 shadow">
-                                    <img src="assets/media/gallery/img-6.png" alt>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </section>
@@ -339,7 +316,7 @@
                                     <h2 class="color-white text-xl-center" id="join-heading">{{ $info->ready_to_play }}
                                     </h2>
                                     <h5 class="color-white text-xl-center">{!! $info->ready_to_play_short_desc !!}</h5>
-                                    <a href="contact.html" class="cus-btn sec">Join Now
+                                    <a href="{{url('contact-us')}}" class="cus-btn sec">Join Now
                                         <!-- SVG icon -->
                                     </a>
                                 </div>

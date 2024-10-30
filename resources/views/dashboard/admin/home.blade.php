@@ -27,70 +27,7 @@
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-3" id="totalsale">
-                <div class="info-box">
-                  <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text">Today's Sale</span>
-                    <span class="info-box-number">
 
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-3" id="totalpurchase">
-                <div class="info-box mb-3">
-                  <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-shopping-basket"></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text">Today's Purchase</span>
-                    <span class="info-box-number"></span>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="clearfix hidden-md-up"></div>
-                <div class="col-12 col-sm-6 col-md-3" id="receivale">
-                  <div class="info-box mb-3">
-                    <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-friends"></i></span>
-                    <div class="info-box-content">
-                      <span class="info-box-text">Total Receivable</span>
-                      <span class="info-box-number"></span>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-3" id="payable">
-                <div class="info-box mb-3">
-                  <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-luggage-cart"></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text">Total Payable</span>
-                    <span class="info-box-number"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-outline card-success">
-                  <div class="card-header">
-                      <h3 class="card-title" style="color:black; font-weight:bold">Quick Actions</h3>
-                  </div>
-                  <div class="card-body">
-                      <a class="btn btn-app bg-secondary" href="" style="color:black"><i class="fas fa-shopping-cart"></i> POS</a>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-      </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
   </div>

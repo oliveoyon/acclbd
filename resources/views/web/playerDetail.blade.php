@@ -1,5 +1,5 @@
 @extends('web.layouts.weblayout')
-@section('title', 'About Us')
+@section('title', 'Player Detail')
 @section('content')
 <!-- Page Start Banner Area Start -->
 <div class="page-title-banner">

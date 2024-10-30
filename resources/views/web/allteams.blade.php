@@ -73,8 +73,8 @@
 <div class="page-title-banner">
     <div class="container">
         <div class="content">
-            <h1 class="mb-16 light-black">Match Results</h1>
-            <p class="light-black">Catch up on the latest action with our most recent game results. See how your favorite corporate teams performed and relive the key moments from the field!</p>
+            <h1 class="mb-16 light-black">Team Directory</h1>
+            <p class="light-black">A Comprehensive Look at Our Diverse Teams!</p>
         </div>
     </div>
 </div>
@@ -103,7 +103,7 @@
                 @empty
                 @endforelse
 
-                
+
             </div>
 
 

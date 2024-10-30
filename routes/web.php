@@ -23,6 +23,8 @@ Route::get('/player-details/{slug}', [WebsiteController::class, 'playerDetail'])
 Route::get('/upcoming-game-lineup', [WebsiteController::class, 'fixture'])->name('fixture');
 Route::get('/match-result', [WebsiteController::class, 'matchResult'])->name('matchResult');
 Route::get('/contact-us', [WebsiteController::class, 'contact'])->name('contact');
+Route::get('/gallery', [WebsiteController::class, 'gallery'])->name('gallery');
+Route::get('/faq', [WebsiteController::class, 'faq'])->name('faq');
 
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
@@ -93,5 +95,18 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('games/{id}/edit', [TeamController::class, 'gamesEdit'])->name('games.edit');
         Route::put('games/{id}', [TeamController::class, 'gamesUpdate'])->name('games.update');
         Route::delete('games/{id}', [TeamController::class, 'gamesDestroy'])->name('games.destroy');
+
+        Route::get('/gallery', [AdminController::class, 'galleryIndex'])->name('galleryIndex');
+        Route::get('/gallery/create', [AdminController::class, 'create'])->name('gallery.create');
+        Route::post('/gallery', [AdminController::class, 'store'])->name('gallery.store');
+        Route::delete('/gallery/{id}', [AdminController::class, 'destroy'])->name('gallery.destroy');
+
+        Route::get('/faq-list', [AdminController::class, 'faqList'])->name('faqs.faq-list'); // List all FAQs
+    Route::get('/faq-create', [AdminController::class, 'faqCreate'])->name('faqs.faq-create'); // Show create form
+    Route::post('/faq-store', [AdminController::class, 'faqStore'])->name('faqs.faq-store'); // Store new FAQ
+    Route::get('/{faq}/faq-show', [AdminController::class, 'faqShow'])->name('faqs.faq-show'); // Show single FAQ
+    Route::get('/{faq}/faq-edit', [AdminController::class, 'faqEdit'])->name('faqs.faq-edit'); // Show edit form
+    Route::put('/{faq}/faq-update', [AdminController::class, 'faqUpdate'])->name('faqs.faq-update'); // Update FAQ
+    Route::delete('/{faq}/faq-delete', [AdminController::class, 'faqDelete'])->name('faqs.faq-delete'); // Delete FAQ
     });
 });

@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="content">
                         <h1 class="mb-16 light-black">Contact us</h1>
-                        <p class="light-black">Lorem ipsum dolor sit amet consectetur. Vitae diam <br> cursus a rhoncus morbi nisi non tempus nullam.</p>
+                        <p class="light-black">Your feedback, inquiries, and suggestions are important to us. <br> Contact us anytime, and we’ll make sure to <br> get back to you as soon as possible.</p>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                                     <i class="fal fa-phone-alt"></i>
                                     <span>+88 01716 552497</span>
                                 </a>
-                                
+
                             </div>
                             <div class="col-xl-4 col-md-6">
                                 <a href="mailto:info@example.com" class="contact-info-blog shadow">
@@ -78,7 +78,7 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </section>
                 <!-- Contact End -->

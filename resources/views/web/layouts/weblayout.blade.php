@@ -49,15 +49,15 @@
                                     <li class="has-children">
                                         <a href="javascript:void(0);">Info Hub</a>
                                         <ul class="submenu">
-                                            
+
                                             <li><a href="{{ url('/gallery') }}">Gallery</a></li>
                                             <li><a href="{{ url('/teams') }}">Teams</a></li>
                                             <li><a href="{{ url('/match-result') }}">Match Result</a></li>
-                                            <li><a href="{{ url('/match-result') }}">Match Schedule</a></li>
+                                            <li><a href="{{ url('/upcoming-game-lineup') }}">Fixture</a></li>
                                             <li><a href="{{ url('/faq') }}">FAQ's</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item"><a href="{{ url('/match-schedule') }}">TOURNAMENTS</a></li>
+                                    <li class="menu-item"><a href="{{ url('/upcoming-game-lineup') }}">Match Schedule</a></li>
                                     <li class="menu-item"><a href="{{ url('/contact-us') }}">CONTACT US</a></li>
                                 </ul>
                             </div>

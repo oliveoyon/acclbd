@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
+use App\Models\Gallery;
 use App\Models\Games;
 use App\Models\Information;
 use App\Models\Player;
@@ -15,6 +17,8 @@ class WebsiteController extends Controller
         $send['info'] = Information::first();
         $send['teams'] = Team::select('id', 'team_slug', 'short_name', 'logo')->get();
         $send['games'] = Games::with(['team1', 'team2'])->get();
+        $send['images'] = Gallery::inRandomOrder()->take(6)->get();
+        // dd($send['images']);
 
         return view('web.home', $send);
     }
@@ -71,6 +75,18 @@ class WebsiteController extends Controller
         $send['info'] = Information::first();
         $send['teams'] = Team::select('id', 'team_slug', 'short_name', 'full_name', 'logo')->get();
         return view('web.allteams', $send);
+    }
+
+    public function gallery()
+    {
+        $send['images'] = Gallery::inRandomOrder()->get();
+        return view('web.gallery', $send);
+    }
+
+    public function faq()
+    {
+        $send['faqs'] = Faq::all();
+        return view('web.faq', $send);
     }
 
 }

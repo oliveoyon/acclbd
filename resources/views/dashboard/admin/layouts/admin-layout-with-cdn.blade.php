@@ -158,6 +158,18 @@
                 <p>Game Management</p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.galleryIndex') }}" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Gallery Management</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.faqs.faq-list') }}" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>FAQ Management</p>
+            </a>
+        </li>
 
 
 

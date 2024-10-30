@@ -1,5 +1,5 @@
 @extends('web.layouts.weblayout')
-@section('title', 'About Us')
+@section('title', 'Team')
 @section('content')
 <!-- Page Start Banner Area Start -->
 <div class="page-title-banner">
@@ -48,7 +48,7 @@
 
 
             </div>
-            
+
         </div>
     </section>
     <!-- Team End -->
