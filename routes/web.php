@@ -17,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('homeindex');
 Route::get('/about-us', [WebsiteController::class, 'about'])->name('about');
+Route::get('/teams', [WebsiteController::class, 'teams'])->name('teams');
 Route::get('/team-details/{team_slug}', [WebsiteController::class, 'teamDetail'])->name('teamDetail');
 Route::get('/player-details/{slug}', [WebsiteController::class, 'playerDetail'])->name('playerDetail');
+Route::get('/upcoming-game-lineup', [WebsiteController::class, 'fixture'])->name('fixture');
+Route::get('/match-result', [WebsiteController::class, 'matchResult'])->name('matchResult');
+Route::get('/contact-us', [WebsiteController::class, 'contact'])->name('contact');
+
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 

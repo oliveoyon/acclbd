@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2024 at 05:54 PM
+-- Generation Time: Oct 30, 2024 at 08:59 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -77,6 +77,50 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `games`
+--
+
+DROP TABLE IF EXISTS `games`;
+CREATE TABLE IF NOT EXISTS `games` (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `team_1_id` bigint UNSIGNED NOT NULL,
+  `team_2_id` bigint UNSIGNED NOT NULL,
+  `stadium` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `match_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scheduled_datetime` datetime NOT NULL,
+  `score_team_1` int DEFAULT NULL,
+  `score_team_2` int DEFAULT NULL,
+  `result` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `match_details` text COLLATE utf8mb4_unicode_ci,
+  `status` tinyint NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `games_team_1_id_foreign` (`team_1_id`),
+  KEY `games_team_2_id_foreign` (`team_2_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `games`
+--
+
+INSERT INTO `games` (`id`, `team_1_id`, `team_2_id`, `stadium`, `match_type`, `scheduled_datetime`, `score_team_1`, `score_team_2`, `result`, `match_details`, `status`, `created_at`, `updated_at`) VALUES
+(2, 6, 7, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-01 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:54:32', '2024-10-28 09:38:43'),
+(3, 4, 8, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-02 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:55:19', '2024-10-28 09:39:12'),
+(4, 5, 3, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-08 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:56:23', '2024-10-28 07:56:23'),
+(5, 9, 10, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-09 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:56:51', '2024-10-28 07:56:51'),
+(6, 6, 10, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-15 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:57:52', '2024-10-28 07:57:52'),
+(7, 4, 3, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-16 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:58:32', '2024-10-28 07:58:32'),
+(8, 5, 8, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-22 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:59:09', '2024-10-28 07:59:09'),
+(9, 9, 7, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-23 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:59:32', '2024-10-28 07:59:32'),
+(10, 7, 10, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-29 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 07:59:57', '2024-10-28 07:59:57'),
+(11, 5, 4, 'Hamidur Rahman Stadium', 'T20 Match', '2024-11-30 21:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 08:00:27', '2024-10-28 08:00:27'),
+(12, 9, 6, 'Hamidur Rahman Stadium', 'T20 Match', '2024-12-06 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 08:01:10', '2024-10-28 08:01:10'),
+(13, 8, 3, 'Hamidur Rahman Stadium', 'T20 Match', '2024-12-07 09:00:00', NULL, NULL, NULL, NULL, 1, '2024-10-28 08:01:51', '2024-10-28 08:01:51');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `informations`
 --
 
@@ -131,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `migrations`
@@ -146,7 +190,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2022_09_13_155619_create_admins_table', 1),
 (7, '2024_10_23_054349_create_information_table', 2),
 (8, '2024_10_23_075937_create_teams_table', 3),
-(10, '2024_10_26_150506_create_players_table', 4);
+(10, '2024_10_26_150506_create_players_table', 4),
+(11, '2024_10_28_105211_create_games_table', 5);
 
 -- --------------------------------------------------------
 
@@ -225,7 +270,14 @@ CREATE TABLE IF NOT EXISTS `players` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `players_slug_unique` (`slug`),
   KEY `players_team_id_foreign` (`team_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `players`
+--
+
+INSERT INTO `players` (`id`, `pl`, `team_id`, `player_name`, `nick_name`, `jersey_no`, `player_image`, `player_type`, `special_type`, `biography`, `status`, `year`, `slug`, `created_at`, `updated_at`) VALUES
+(3, '4vOhc7G4XA', 3, 'Arifur Rahman', 'Arif', 12, 'player_images/ZzNSyPjW1nohlkkPVXfMYzuLiYJ3m4JbbmSzwurD.png', 'All Rounder', NULL, '<p>lorem</p>', 1, '2024', 'arifur-rahman', '2024-10-27 11:15:59', '2024-10-27 11:15:59');
 
 -- --------------------------------------------------------
 
@@ -255,14 +307,14 @@ CREATE TABLE IF NOT EXISTS `teams` (
 --
 
 INSERT INTO `teams` (`id`, `full_name`, `team_slug`, `short_name`, `group_name`, `logo`, `team_image`, `description`, `year`, `status`, `created_at`, `updated_at`) VALUES
-(3, 'BLCC', 'blcc', 'BLCC', 'Group A', 'logos/60DBbDEPFwgkXm0PTg1sSuU2MC9r3iLMRmau9hJT.png', 'team_images/vCFk0rleFAVZOQuNpqTg3lhoMGIPvIhC02T741I8.png', NULL, '2024', 1, '2024-10-26 11:46:40', '2024-10-26 11:46:40'),
-(4, 'Fiber at Home', 'fiber-at-home', 'FAH', 'Group A', 'logos/5wwEEufBVZ8Egbkrndgx3zFxQq1qW1gx0eP6b4LO.png', NULL, NULL, '2024', 1, '2024-10-26 11:47:04', '2024-10-26 11:47:04'),
-(5, 'Golder Wheels Bd', 'golder-wheels-bd', 'GWB', 'Group A', 'logos/L7MZtRjG60vKKr29O55PnKq5rnGXJt7IKlt7k0xf.png', NULL, NULL, '2024', 1, '2024-10-26 11:47:30', '2024-10-26 11:47:30'),
-(6, 'Grameenphone', 'grameenphone', 'GP', 'Group A', 'logos/FMlNNs32Kspt1wg7ytBPAp8pRmR71FmnmLG1roIR.png', NULL, 'fdf', 'fdf', 1, '2024-10-26 11:47:58', '2024-10-26 11:47:58'),
-(7, 'HSBC', 'hsbc', 'HSPC', 'Group A', 'logos/8V7n9hPEj9lV2PAL41OLsOELE24qwqf3kCqpKIEo.png', NULL, NULL, '2024', 1, '2024-10-26 11:48:20', '2024-10-26 11:51:11'),
-(8, 'LCAB', 'lcab', 'LCAB', 'Group A', 'logos/xttwMsOVOV67MnrT1ySQUndtQ1FxfddVc0ALYrKf.png', NULL, NULL, '2024', 1, '2024-10-26 11:48:42', '2024-10-26 11:48:42'),
-(9, 'Robi', 'robi', 'Robi', 'Group A', 'logos/F1QqgU1FsMpsaHornlVhVEewFEgZR98gM0bXsP3e.png', NULL, NULL, '2024', 1, '2024-10-26 11:49:03', '2024-10-26 11:49:03'),
-(10, 'United', 'united', 'United', 'Group A', 'logos/lUpYDqsaJ4e2hB4j8ul8wlgVNMZ6pATGo4qB6tfN.png', NULL, NULL, '2024', 1, '2024-10-26 11:49:18', '2024-10-26 11:49:18');
+(3, 'BLCC', 'blcc', 'BLCC', 'Group A', 'logos/0PR3beaD6p2D52DuVpH69cP38Uc6d1RA9eepqlgY.png', 'team_images/vCFk0rleFAVZOQuNpqTg3lhoMGIPvIhC02T741I8.png', 'fdfdfdfdf', '2024', 1, '2024-10-26 11:46:40', '2024-10-27 10:59:18'),
+(4, 'Fiber at Home', 'fiber-at-home', 'FAH', 'Group A', 'logos/oLWcFPj51FWSf1D92UVxHW7qCGJHBfVrzKOjQdjO.png', NULL, NULL, '2024', 1, '2024-10-26 11:47:04', '2024-10-27 10:59:36'),
+(5, 'Golder Wheels Bd', 'golder-wheels-bd', 'GWB', 'Group A', 'logos/MtYK5VSOMLbQuNS9Agx264oTA7f2wsZaBoj2j5Cj.png', NULL, NULL, '2024', 1, '2024-10-26 11:47:30', '2024-10-27 10:59:45'),
+(6, 'Grameenphone', 'grameenphone', 'GP', 'Group A', 'logos/HvoeszoOGKh0tBIIKJg97nfdsNrl2HGvaYrr1nmA.png', NULL, 'fdf', 'fdf', 1, '2024-10-26 11:47:58', '2024-10-27 10:59:55'),
+(7, 'HSBC', 'hsbc', 'HSBC', 'Group A', 'logos/gOBZX1XqvyLaOYlogorguHgs0xJhVQr7AyA03CVO.png', NULL, NULL, '2024', 1, '2024-10-26 11:48:20', '2024-10-28 09:39:57'),
+(8, 'LCAB', 'lcab', 'LCAB', 'Group A', 'logos/jraF8RU2HZBc6jpiCGrkFTM3NGI3EJaZltkTsIBG.png', NULL, NULL, '2024', 1, '2024-10-26 11:48:42', '2024-10-27 11:00:18'),
+(9, 'Robi', 'robi', 'Robi', 'Group A', 'logos/tQ4ELIB9qbhS9VpQTOI0KK6HpaoGAsGoOljZm2GO.png', NULL, NULL, '2024', 1, '2024-10-26 11:49:03', '2024-10-27 11:00:30'),
+(10, 'United', 'united', 'United', 'Group A', 'logos/axDp3eMlY6HAczHwgvmbzUMzX8GPOZdTSu1ORdvD.png', NULL, NULL, '2024', 1, '2024-10-26 11:49:18', '2024-10-27 11:00:43');
 
 -- --------------------------------------------------------
 

@@ -48,23 +48,7 @@
 
 
             </div>
-            <ul class="pagination">
-                <li>
-                    <a href="team.html"><i class="fas fa-chevron-left"></i></a>
-                </li>
-                <li>
-                    <a href="team.html" class="active">01</a>
-                </li>
-                <li>
-                    <a href="team.html">02</a>
-                </li>
-                <li>
-                    <a href="team.html">03</a>
-                </li>
-                <li>
-                    <a href="team.html"><i class="fas fa-chevron-right"></i></a>
-                </li>
-            </ul>
+            
         </div>
     </section>
     <!-- Team End -->

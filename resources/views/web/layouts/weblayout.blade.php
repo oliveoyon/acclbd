@@ -47,20 +47,18 @@
                                     <li class="menu-item"><a href="{{ url('/') }}" class="active">Home</a></li>
                                     <li class="menu-item"><a href="{{ url('/about-us') }}">ABOUT US</a></li>
                                     <li class="has-children">
-                                        <a href="javascript:void(0);">Pages</a>
+                                        <a href="javascript:void(0);">Info Hub</a>
                                         <ul class="submenu">
-                                            <li><a href="{{ url('/blog') }}">Blog</a></li>
-                                            <li><a href="{{ url('/blog-detail') }}">Blog Detail</a></li>
+                                            
                                             <li><a href="{{ url('/gallery') }}">Gallery</a></li>
-                                            <li><a href="{{ url('/team') }}">Team</a></li>
-                                            <li><a href="{{ url('/player-detail') }}">Player Detail</a></li>
+                                            <li><a href="{{ url('/teams') }}">Teams</a></li>
                                             <li><a href="{{ url('/match-result') }}">Match Result</a></li>
-                                            <li><a href="{{ url('/match-schedule') }}">Match Schedule</a></li>
+                                            <li><a href="{{ url('/match-result') }}">Match Schedule</a></li>
                                             <li><a href="{{ url('/faq') }}">FAQ's</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item"><a href="{{ url('/match-schedule') }}">TOURNAMENTS</a></li>
-                                    <li class="menu-item"><a href="{{ url('/contact') }}">CONTACT US</a></li>
+                                    <li class="menu-item"><a href="{{ url('/contact-us') }}">CONTACT US</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -121,7 +119,7 @@
                         <div class="contact">
                             <h5 class="light-black">CONTACT US</h5>
                             <ul class="contact-list unstyled">
-                                <li class="mb-16"><i class="fal fa-map-marker-alt"></i> <h6>1 Kazi Alauddin Road, Bongshal</h6></li>
+                                <li class="mb-16"><i class="fal fa-map-marker-alt"></i> <h6>1 Kazi Alauddin Road, Bongshal, Dhaka</h6></li>
                                 <li class="mb-16">
                                     <a href="tel:+8801716552497"><i class="fal fa-phone-alt"></i> <span>+88 01716 552497</span></a>
                                 </li>

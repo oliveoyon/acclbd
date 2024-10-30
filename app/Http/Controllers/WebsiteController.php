@@ -47,4 +47,30 @@ class WebsiteController extends Controller
         return view('web.playerDetail', $send);
     }
 
+    public function fixture()
+    {
+        $send['games'] = Games::with(['team1', 'team2'])->get();
+        $send['info'] = Information::first();
+        return view('web.fixture', $send);
+    }
+
+    public function matchResult()
+    {
+        $send['games'] = Games::with(['team1', 'team2'])->get();
+        return view('web.match_result', $send);
+    }
+
+    public function contact()
+    {
+        $send['info'] = Information::first();
+        return view('web.contact', $send);
+    }
+
+    public function teams()
+    {
+        $send['info'] = Information::first();
+        $send['teams'] = Team::select('id', 'team_slug', 'short_name', 'full_name', 'logo')->get();
+        return view('web.allteams', $send);
+    }
+
 }
