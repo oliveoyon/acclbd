@@ -141,9 +141,21 @@
         <ul class="nav nav-pills nav-sidebar text-sm flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
         <li class="nav-item">
+            <a href="{{ route('admin.basicInfo') }}" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Home Page Management</p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('admin.teams.index') }}" class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
                 <p>Team Management</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.games.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Game Management</p>
             </a>
         </li>
 

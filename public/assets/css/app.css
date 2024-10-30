@@ -5,7 +5,7 @@
 // Description:  Cricket Pulse - Sports Club Html Template
 // Version: 1.0.0
 
-===============================================   
+===============================================
 STYLE SHEET INDEXING
 |
 |___ Fonts
@@ -2508,7 +2508,7 @@ footer .footer-main .footer-info .input-group button {
   }
 }
 .match-results .result-block .item .teams .team .team-logo-name {
-  width: 152px;
+  width: 275px; /*Arif Team log width*/
   display: flex;
   flex-direction: column;
   align-items: center;

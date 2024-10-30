@@ -83,13 +83,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
         Route::get('games', [TeamController::class, 'gamesIndex'])->name('games.index');
-Route::get('games/create', [TeamController::class, 'gamesCreate'])->name('games.create');
-Route::post('games', [TeamController::class, 'gamesStore'])->name('games.store');
-Route::get('games/{id}/edit', [TeamController::class, 'gamesEdit'])->name('games.edit');
-Route::put('games/{id}', [TeamController::class, 'gamesUpdate'])->name('games.update');
-Route::delete('games/{id}', [TeamController::class, 'gamesDestroy'])->name('games.destroy');
-
-
-
+        Route::get('games/create', [TeamController::class, 'gamesCreate'])->name('games.create');
+        Route::post('games', [TeamController::class, 'gamesStore'])->name('games.store');
+        Route::get('games/{id}/edit', [TeamController::class, 'gamesEdit'])->name('games.edit');
+        Route::put('games/{id}', [TeamController::class, 'gamesUpdate'])->name('games.update');
+        Route::delete('games/{id}', [TeamController::class, 'gamesDestroy'])->name('games.destroy');
     });
 });

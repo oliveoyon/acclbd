@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Games;
 use App\Models\Information;
 use App\Models\Player;
 use App\Models\Team;
@@ -13,6 +14,8 @@ class WebsiteController extends Controller
     {
         $send['info'] = Information::first();
         $send['teams'] = Team::select('id', 'team_slug', 'short_name', 'logo')->get();
+        $send['games'] = Games::with(['team1', 'team2'])->get();
+
         return view('web.home', $send);
     }
 
