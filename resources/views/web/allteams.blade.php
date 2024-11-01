@@ -25,7 +25,7 @@
         /* width: 50%; */
         /* border-radius: 50%; */
         overflow: hidden;
-        border: 2px solid #6c757d;
+        /* border: 2px solid #6c757d; */
         margin-right: 15px;
     }
 

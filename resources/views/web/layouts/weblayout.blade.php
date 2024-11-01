@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +42,8 @@
                         <div class="col-lg-8">
                             <div class="left-nav">
                                 <a href="{{ url('/') }}" class="navbar-brand m-0 p-0">
-                                    <img src="{{ asset('assets/media/vector/logo.png') }}" style="height: 80px;" alt="">
+                                    <img src="{{ asset('assets/media/vector/logo.png') }}" style="height: 80px;"
+                                        alt="">
                                 </a>
                                 <ul class="navbar-nav m-0">
                                     <li class="menu-item"><a href="{{ url('/') }}" class="active">Home</a></li>
@@ -57,7 +59,8 @@
                                             <li><a href="{{ url('/faq') }}">FAQ's</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item"><a href="{{ url('/upcoming-game-lineup') }}">Match Schedule</a></li>
+                                    <li class="menu-item"><a href="{{ url('/upcoming-game-lineup') }}">Match
+                                            Schedule</a></li>
                                     <li class="menu-item"><a href="{{ url('/contact-us') }}">CONTACT US</a></li>
                                 </ul>
                             </div>
@@ -72,6 +75,39 @@
                 </nav>
             </div>
         </header>
+        <!-- Header Area end -->
+        <header class="small-screen">
+            <div class="container-fluid">
+                <div class="mobile-menu">
+                    <div>
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img style="height:60px;" src="{{ asset('assets/media/vector/logo.png') }}">
+                        </a>
+                    </div>
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <nav class="mobile-navar d-xl-none">
+                    <ul>
+                        <li><a href="{{ url('/') }}" class="active">Home</a></li>
+                        <li><a href="{{ url('/about-us') }}">ABOUT US</a></li>
+                        <li class="has-children">Info Hub <span class="icon-arrow"></span>
+                            <ul class="children">
+                                <li><a href="{{ url('/gallery') }}">Gallery</a></li>
+                                <li><a href="{{ url('/teams') }}">Teams</a></li>
+                                <li><a href="{{ url('/match-result') }}">Match Result</a></li>
+                                <li><a href="{{ url('/upcoming-game-lineup') }}">Fixture</a></li>
+                                <li><a href="{{ url('/faq') }}">FAQ's</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url('/upcoming-game-lineup') }}">Match Schedule</a></li>
+                        <li><a href="{{ url('/contact-us') }}">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <!-- Header Area end -->
 
         @yield('content')
@@ -97,46 +133,62 @@
                         <div class="footer-about">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('assets/media/logo.png') }}" alt="" style="height: 100px">
+                                    <img src="{{ asset('assets/media/logo.png') }}" alt=""
+                                        style="height: 100px">
                                 </a>
                             </div>
-                            <p class="dark-gray">Thank you for visiting the Amateur Corporate Cricket League!<br>Stay connected with us for updates, match schedules, and more.<br>Together, let's celebrate the spirit of corporate cricket! </p>
+                            <p class="dark-gray">Thank you for visiting the Amateur Corporate Cricket League!<br>Stay
+                                connected with us for updates, match schedules, and more.<br>Together, let's celebrate
+                                the spirit of corporate cricket! </p>
                         </div>
                         <div class="menu">
                             <h5 class="light-black">MENU</h5>
                             <ul class="link unstyled">
                                 <li class="mb-16">
-                                    <a href="{{ url('/') }}"><p class="dark-gray">Home</p></a>
+                                    <a href="{{ url('/') }}">
+                                        <p class="dark-gray">Home</p>
+                                    </a>
                                 </li>
                                 <li class="mb-16">
-                                    <a href="{{ url('/about') }}"><p class="dark-gray">About us</p></a>
+                                    <a href="{{ url('/about-us') }}">
+                                        <p class="dark-gray">About us</p>
+                                    </a>
                                 </li>
                                 <li class="">
-                                    <a href="{{ url('/tournaments') }}"><p class="dark-gray">Tournaments</p></a>
+                                    <a href="{{ url('/upcoming-game-lineup') }}">
+                                        <p class="dark-gray">Tournaments</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="contact">
                             <h5 class="light-black">CONTACT US</h5>
                             <ul class="contact-list unstyled">
-                                <li class="mb-16"><i class="fal fa-map-marker-alt"></i> <h6>1 Kazi Alauddin Road, Bongshal, Dhaka</h6></li>
+                                <li class="mb-16"><i class="fal fa-map-marker-alt"></i>
+                                    <h6>1 Kazi Alauddin Road, Bongshal, Dhaka</h6>
+                                </li>
                                 <li class="mb-16">
-                                    <a href="tel:+8801716552497"><i class="fal fa-phone-alt"></i> <span>+88 01716 552497</span></a>
+                                    <a href="tel:+8801716552497"><i class="fal fa-phone-alt"></i> <span>+88 01716
+                                            552497</span></a>
                                 </li>
                                 <li>
-                                    <a href="mailto:cricket@acclbd.xyz"><i class="fal fa-envelope"></i> <span>cricket@acclbd.xyz</span></a>
+                                    <a href="mailto:cricket@acclbd.xyz"><i class="fal fa-envelope"></i>
+                                        <span>cricket@acclbd.xyz</span></a>
                                 </li>
                             </ul>
                         </div>
                         <div class="social">
                             <h5 class="light-black">FOLLOW US!</h5>
                             <ul class="unstyled social-icons">
-                                <li><a target="_blank" href="https://www.facebook.com/acclbd.xyz/"><img src="{{ asset('assets/media/icons/Facebook.png') }}" alt=""></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/acclbd.xyz/"><img
+                                            src="{{ asset('assets/media/icons/Facebook.png') }}" alt=""></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <p class="dark-gray text-center mb-16">©2024 ACCLBD All Rights Reserved | Developed By <a href="https://iconbangla.net" target="_blank" rel="noopener noreferrer">IconBangla</a></p>
+                <p class="dark-gray text-center mb-16">©2024 ACCLBD All Rights Reserved | Developed By <a
+                        href="https://iconbangla.net" target="_blank" rel="noopener noreferrer">IconBangla</a></p>
             </div>
         </footer>
         <!-- Footer Area End  -->
@@ -150,7 +202,8 @@
                             <span aria-hidden="true"></span>
                         </button>
                         <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EzDC8aAJln0" id="video"></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EzDC8aAJln0"
+                                id="video"></iframe>
                         </div>
                     </div>
                 </div>
@@ -168,4 +221,5 @@
     <script src="{{ asset('assets/js/vendor/jquery-validator.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
+
 </html>
